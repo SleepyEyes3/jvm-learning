@@ -9,7 +9,7 @@ import java.util.Random;
 *      这里不要加载的（也就是在TraceClassLoading中不显示的，都是可以删除的）
 * */
 
-public class ClassLoadingTest5 {
+public class ClassLoadingTest05 {
     public static void main(String[] args) {
 //        System.out.println(MyChild5.b);
 //        new C();

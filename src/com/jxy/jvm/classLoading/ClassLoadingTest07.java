@@ -1,6 +1,6 @@
 package com.jxy.jvm.classLoading;
 
-public class ClassLoadingTest7 {
+public class ClassLoadingTest07 {
     public static void main(String[] args) throws Exception{
         Class<?> class1 = Class.forName("java.lang.String");
         System.out.println(class1.getClassLoader()); // bootstrap classloader

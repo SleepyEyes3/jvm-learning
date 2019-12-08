@@ -11,7 +11,7 @@ import java.util.ArrayList;
 *   anewarray: 表示创建一个引用类型的(如类、接口、数组)数组，并将其压入到栈顶
 *   newarray: 表示创建一个指定的原始类型，（如 int float char）的数组，并将其压入栈顶
 * */
-public class ClassLoadingTest4 {
+public class ClassLoadingTest04 {
     public static void main(String[] args) {
         Myparent4[] myparent4s = new Myparent4[1]; // 不会完成初始化static
         System.out.println(myparent4s.getClass());

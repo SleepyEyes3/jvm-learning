@@ -17,7 +17,7 @@ package com.jxy.jvm.classLoading;
 *
 *
 * */
-public class ClassLoadingTest2 {
+public class ClassLoadingTest02 {
     public static void main(String[] args) {
         System.out.println(MyParent2.s);
     }

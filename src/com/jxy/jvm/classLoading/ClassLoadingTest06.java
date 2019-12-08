@@ -1,6 +1,6 @@
 package com.jxy.jvm.classLoading;
 
-public class ClassLoadingTest6 {
+public class ClassLoadingTest06 {
     public static void main(String[] args) {
         Singleton singleton = Singleton.getSingleton();
         System.out.println(singleton.counter1); // 输出 1

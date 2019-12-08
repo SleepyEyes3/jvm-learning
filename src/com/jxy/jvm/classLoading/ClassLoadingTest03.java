@@ -6,7 +6,7 @@ import java.util.UUID;
 * 这时在程序运行时，会导致主动使用这个常量所在的类，显然会导致这个类被初始化；
 *
 * */
-public class ClassLoadingTest3 {
+public class ClassLoadingTest03 {
     public static void main(String[] args) {
         System.out.println(MyParent3.str);
     }

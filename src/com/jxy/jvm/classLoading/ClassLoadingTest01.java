@@ -1,4 +1,4 @@
 package com.jxy.jvm.classLoading;
 
-public class ClassLoadingTest {
+public class ClassLoadingTest01 {
 }
