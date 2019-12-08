@@ -16,7 +16,7 @@ class Child9 extends Parent9{
 
 
 
-public class ClassLoadingTest9 {
+public class ClassLoadingTest09 {
     static {
         System.out.println("ClassLoadingTest9 static block");
     }
