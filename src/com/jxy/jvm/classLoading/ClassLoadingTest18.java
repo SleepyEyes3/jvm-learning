@@ -25,5 +25,10 @@ public class ClassLoadingTest18 {
 
         // 扩展类加载器与系统类加载器也是有启动类加载器锁加载的
         System.out.println(Launcher.class.getClassLoader());
+
+        // 通过下面的路径，可以改变系统类加载器
+        System.out.println(System.getProperty("java.system.class.loader"));
+
+        System.out.println(ClassLoader.getSystemClassLoader());
     }
 }

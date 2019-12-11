@@ -29,5 +29,6 @@ public class ClassLoadingTest20 {
 
         Method method = clazz1.getMethod("setMyPerson", Object.class);
         method.invoke(object1,object2); // 参数一： 通过哪个参数调用该方法 参数二： 所需传入的参数
+
     }
 }

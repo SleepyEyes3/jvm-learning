@@ -32,6 +32,11 @@ public class ClassLoadingTest16 extends ClassLoader{
         this.classLoderName = classLoderName;
     }
 
+    // 自定义系统加载类，需要下面的构造函数
+    public ClassLoadingTest16(ClassLoader parent){
+        super(parent);
+    }
+
     @Override
     public String toString(){
         return "[" + this.classLoderName + "]";
@@ -46,8 +51,8 @@ public class ClassLoadingTest16 extends ClassLoader{
     private byte[] loadClassData(String name){
         // 读取文件，并返回byte数组的过程
 //        System.out.println("自定义loadClass开始执行！");
-        System.out.println("classLoaderName：" + name);
-        System.out.println("findClass invoked: " + this.classLoderName);
+        System.out.println("classLoaderName：" + this.classLoderName);
+        System.out.println("findClass invoked: " + name);
         InputStream is = null;
         byte[] data = null;
         ByteArrayOutputStream baos = null;
