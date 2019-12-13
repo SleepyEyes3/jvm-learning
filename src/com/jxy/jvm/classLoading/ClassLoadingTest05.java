@@ -13,7 +13,7 @@ public class ClassLoadingTest05 {
     public static void main(String[] args) {
         System.out.println(MyChild5.a);
 //        new C();
-//        System.out.println(MyParent5_1.thread);
+        System.out.println(MyParent5_1.thread);
     }
 }
 

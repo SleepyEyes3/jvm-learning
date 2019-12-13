@@ -23,6 +23,11 @@ import java.util.ServiceLoader;
 *
 *   ContextClassLoader的作用就是为了破坏Java的类加载委托机制；
 *
+*   *****关键*****
+*       为什么需要打破呢？
+*           SPI服务中，核心接口是由bootstrap ClassLoader进行加载的，但是其具体实现类，是在运行期间才知道的，需要由
+*       AppClassLoader进行加载；
+*
 *   当高层提供了统一的接口让低层去实现，同时又要在高层加载（或实例化）低层的类时，就必须要通过线程上下文加载器来帮助高层的
 *   ClassLoader找到并加载该类；
 *
@@ -31,6 +36,14 @@ public class ClassLoadingTest26 {
 
     public static void main(String[] args) {
 //        Thread.currentThread().setContextClassLoader(ClassLoadingTest26.class.getClassLoader().getParent());
+
+//     load的源码部分分析：
+//        public static <S> ServiceLoader<S> load(Class<S> service) {
+//            ClassLoader cl = Thread.currentThread().getContextClassLoader();
+//            return ServiceLoader.load(service, cl);
+//        }
+//        load方法的源码可以看出，ServiceLoader会使用当前线程的ClassLoader去加载Driver.class，但是当前的
+//        ClassLoader为空的话，会使用SystemClassLoader进行加载
         ServiceLoader<Driver> load = ServiceLoader.load(Driver.class); // 注意： 查看一下load的源码
         Iterator<Driver> iterator = load.iterator();
         while(iterator.hasNext()){

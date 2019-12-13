@@ -33,6 +33,9 @@ package com.jxy.jvm.classLoading;
 public class ClassLoadingTest24 {
     public static void main(String[] args) {
         System.out.println(Thread.currentThread().getContextClassLoader());
+
+        System.out.println(ClassLoadingTest24.class.getClassLoader());
+
         System.out.println(Thread.class.getClassLoader());
     }
 }
