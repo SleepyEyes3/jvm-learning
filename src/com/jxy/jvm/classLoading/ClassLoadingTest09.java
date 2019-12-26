@@ -1,5 +1,8 @@
 package com.jxy.jvm.classLoading;
-
+/*
+*   结论 ： 只有当前程序访问的静态变量或静态方法确实在“当前类或当前接口”中定义时，
+*          才可以认为是对类或接口的主动使用
+* */
 class Parent9{
     public  static int a= 1;
     static {
@@ -22,6 +25,7 @@ public class ClassLoadingTest09 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Child9.b);
+//        System.out.println(Child9.a); // 没有初始化Child
+        System.out.println(Child9.b); // 初始化了Child和Parent
     }
 }

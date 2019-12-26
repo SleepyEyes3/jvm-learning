@@ -1,6 +1,6 @@
 package com.jxy.jvm.classLoading;
 
-public class MySample {
+public class  MySample {
     public MySample(){
         System.out.println("MySample is loaded by: " + this.getClass().getClassLoader());
         new MyCat(); // MyCat.class 需要MySample.class的类加载器加载

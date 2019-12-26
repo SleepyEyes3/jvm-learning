@@ -1,5 +1,9 @@
 package com.jxy.jvm.classLoading;
 
+/*
+ *   结论 ： 只有当前程序访问的静态变量或静态方法确实在“当前类或当前接口”中定义时，
+ *          才可以认为是对类或接口的主动使用
+ * */
 class Paren11{
     static {
         System.out.println("parent11 static block");

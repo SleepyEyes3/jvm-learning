@@ -1,7 +1,8 @@
 package com.jxy.jvm.bytecode;
 
-import jdk.internal.org.objectweb.asm.tree.analysis.Analyzer;
-
+/*
+*   结论 ： 实际的类型在运行时决定，但是得先编译成功；
+* */
 import java.util.Date;
 
 public class MyTest7 {
